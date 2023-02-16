@@ -1,6 +1,7 @@
 # terraform-project-template
 
-A base template for building Terraform projects based on terraform best practices
+A base template for building Terraform projects based on (terraform best practices
+)[https://github.com/johnmccuk/terraform-best-practices.git]
 
 ## Setting up State storage
 
