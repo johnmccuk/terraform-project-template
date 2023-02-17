@@ -19,4 +19,9 @@ provider "aws" {
 locals {
   name   = basename(path.cwd)
   region = "eu-west-1"
+  tags = {
+    TF-Name     = basename(path.cwd)
+    Environment = var.environment
+    Repo        = "https://github.com/johnmccuk/${basename(path.cwd)}.git"
+  }
 }
