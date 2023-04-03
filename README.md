@@ -1,30 +1,12 @@
 # terraform-project-template
 
-A base template for building Terraform projects based on (terraform best practices
-)[https://github.com/johnmccuk/terraform-best-practices.git]
+A base template for building Terraform projects based on [terraform best practices
+](https://github.com/johnmccuk/terraform-best-practices.git)
+
+** USE SEPARATE STATE FILES. FOR EVERY ENVIRONMENT. **
+
+[if you want to know why] (https://charity.wtf/2016/03/30/terraform-vpc-and-why-you-want-a-tfstate-file-per-env/)
 
 ## Setting up State storage
 
-After you set `config/backend-dev.conf` and `config/dev.tfvars` properly (for each environment). You can easily run terraform as below:
-
-```
-env=dev
-terraform get -update=true
-terraform init -reconfigure -backend-config=config/backend-${env}.conf
-terraform plan -var-file=config/${env}.tfvars
-terraform apply -var-file=config/${env}.tfvars
-```
-
-If you encountered any unexpected issues, delete the cache folder, and try again.
-
-`rm -rf .terraform`
-
-## Lambda Integration
-
-see (tips to deal with lambda functions)[https://github.com/johnmccuk/terraform-best-practices#tips-to-deal-with-lambda-functions] explaing how to use Lambda's properly.
-
-See `lambda.tf.example` for an example of how to use this method to zip up Lambda code.
-
-# New Project Title
-
-_Remove template readme text and add new project readme here_
+TODO
